@@ -1,92 +1,73 @@
----
-author: Dua Tran
-title: Rock-Paper-Scissor game
-id: rock_paper_scissor_game_trancaodua
----
+# Getting Started with Create React App
 
-# Rock Paper Scissors Game
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Props are one of the most basic and important properties in React.
-The purpose of this project is to practice our skills with React props.
+## Available Scripts
 
-You must have played the "Rock Paper Scissors Game" at least once. And now, we are making a Rock Paper Scissors Game together on the web.
+In the project directory, you can run:
 
-| ![](https://i.ibb.co/35b4Tsk/Screenshot-from-2022-05-09-21-43-09.png) |
-| :-------------------------------------------------------------------: |
-|                      _Rock Paper Scrissor Game_                       |
+### `npm start`
 
-[Go to demo website !](https://rock-paper-scissor-trancaodua.netlify.app/)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## User Story
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- User play "Rock Paper Scissors game" with a computer.
-- User select "Rock" or "Paper" or "Scissors" and game start.
-- User selection trigger computer selection
-- Computer's selection is random. Result is display immediately.
+### `npm test`
 
-## Requirement
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Fork this [repo](https://github.com/trancaodua/rock-paper-scrissor-game) and read through the files.
-Often time , developers are required to work with an existing codebase and improve upon. This is one of that time.
+### `npm run build`
 
-**Repository has 2 branches:**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- `requirement`: Has requirements. You will code on this branch.
-- `solution`: Has solutions for requirements.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-**Guide checkout `requirement` branch to code:**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Step 1: Clone this repository. Run: `git clone https://github.com/trancaodua/rock-paper-scrissor-game.git`
-- Step 2: Checkout `requirement` branch to start coding. Run: `git checkout requirement`
+### `npm run eject`
 
-**Guide checkout `solution` branch to see answers:**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- Step 1: Checkout `solution` branch. Run: `git checkout solution`.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-You should only code in the designinated area.
-Using the VSC search function for "Your code here", you will see a list of all the places that requires your attention.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Explain code
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- src/utils/index.js
+## Learn More
 
-```
-# input: gamesItems is a list of items.
-# return: a random item in the list.
-# Description: get random item from gamesItems list.
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```javascript
-export const getRandomGameItem = (gamesItems) => {
-  const index = Math.floor(Math.random() * gamesItems.length); //create index random between 0 to gamesItems.length - 1
-  return gamesItems[index]; //return item
-};
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```
-# input: user1GameItem, user2GameItem - is object game, contains game item id and list can win.
-Object example:
-user1GameItem = {
-    url: "/images/paper.png",
-    id: 0,
-    winItemIds: [1],
-    name: "Paper",
-}
-# return: game result.
-# Description: calculator result player.
-```
+### Code Splitting
 
-```javascript
-export const calculatorUserWinner = (user1GameItem, user2GameItem) => {
-  if (user1GameItem.id === user2GameItem.id) {
-    return "Peace"; //return both player same.
-  } else if (user1GameItem.winItemIds.includes(user2GameItem.id)) {
-    return "Win"; //if player 1 winItemIds list contain game player 2 id => player 1 win player 2.
-  } else {
-    return "Lost"; //if winItemIds list not contain game player 2 id => player 1 lost, player 2 .
-  }
-};
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 Practice Thinking in Static UI
 1 - <ProfilePage />
